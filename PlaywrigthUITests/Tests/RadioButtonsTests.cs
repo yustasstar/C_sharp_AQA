@@ -27,7 +27,7 @@ namespace PlaywrigthUITests.Tests
             await _RadioButtonPage.VerifyTextYesVisible();
         }
         //Homework Lesson_9
-        //TODO : 
+        //TODO need to be finished: 
         //TC-2 : Verify Impressive radio Button can be checked and display text 'You have selected Impressive'
         //[Test]
         //[Description("Verify Impressive radio Button can be checked and display text 'You have selected Impressive'")]
