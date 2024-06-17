@@ -36,7 +36,7 @@ namespace AtataUITests.Tests
             Go.To<UploadDownloadPage>()
                 .Upload.Set(HelperMethods.GetArtifactsDirectoryPath() + "\\sampleFile.jpeg")
                 .uploadedFilePath.Should.BeVisible()
-                //.uploadedFilePath.Should.Contain("sampleFile.jpeg");
+                .uploadedFilePath.Should.Contain("sampleFile.jpeg");
                
             AtataContext.Current.Artifacts.Should.WithinSeconds(10).ContainFile("sampleFile.jpeg");
         }
