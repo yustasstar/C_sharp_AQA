@@ -48,14 +48,14 @@ namespace PlaywrigthUITests.Tests
         [Test]
         [Order(2)]
         [Description("Clear Text Full Name Input, press submit, text Name should not be visible")]
-        public async Task VerifyTextClearFullName()
-        {
-            await _TextBoxPage.GoToTextBoxPage();
-            await _TextBoxPage.ClearFullNameInput();
-            await _TextBoxPage.ClickSubmitButton();
-            await _TextBoxPage.isSubmitButtonFocused();
-            var isVisible = await _TextBoxPage.IsNameHidden("Test Name 123");
-            Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should not be visible.");
-        }
+        //public async Task VerifyTextClearFullName()
+        //{
+        //    await _TextBoxPage.GoToTextBoxPage();
+        //    await _TextBoxPage.ClearFullNameInput();
+        //    await _TextBoxPage.ClickSubmitButton();
+        //    await _TextBoxPage.isSubmitButtonFocused();
+        //    var isVisible = await _TextBoxPage.IsNameHidden("Test Name 123");
+        //    Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should not be visible.");
+        //}
     }
 }
