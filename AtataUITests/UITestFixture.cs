@@ -6,10 +6,14 @@
     {
         [SetUp]
         public void SetUp() =>
-            AtataContext.Configure().Build();
+            AtataContext.Configure()
+                .UseChrome()
+                    .WithArguments("start-maximized")
+                    .WithArtifactsAsDownloadDirectory()
+                .Build();
 
         [TearDown]
         public void TearDown() =>
-        AtataContext.Current?.Dispose();
+            AtataContext.Current?.Dispose();
     }
 }

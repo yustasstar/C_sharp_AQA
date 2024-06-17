@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Atata;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace AtataUITests.Infrastructure
 {
     internal class HelperMethods
     {
-        internal static string GetProjectFilePath()
+        internal static string GetPathToProjectFolder()
         {
             string pathFile = Directory.GetCurrentDirectory();
             int index = pathFile.IndexOf("bin");
@@ -25,7 +26,7 @@ namespace AtataUITests.Infrastructure
             AtataContext context = AtataContext.Current;
             if (context == null)
             {
-                throw new InvalidOperationException("Atata context is not initialized.");
+                throw new InvalidOperationException("Atata context is not initialized");
             }
 
             string artifactsDirectoryPath = context.Artifacts.FullName;
@@ -36,5 +37,6 @@ namespace AtataUITests.Infrastructure
             // Output or use the artifacts directory path as needed
             return artifactsDirectoryPath.ToString();
         }
+
     }
 }

@@ -1,33 +1,60 @@
 ﻿using AtataUITests.PageObjects;
+using NUnit.Framework.Internal;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AtataUITests.Tests
 {
     internal class RadioButtonTests : UITestFixture
     {
         [Test]
-        public void VerifyYesRadioButtonVisible()
+        [Description("Verify Radio Button page Text")]
+        [Retry(2)]
+        public void VerifyTextRadioButton()
         {
-            Go.To<DemoQARadioButtonPage>().
-                RadioButtons[x => x.Label.Content.Value.Equals("Yes")].Label.Click().
-                RadioButtons[x => x.Label.Content.Value.Equals("Yes")].RadioButton.Should.BeChecked().
-                Text.Should.Be("You have selected Yes");
+            Go.To<RadioButtonPage>()
+                .PageUrl.Should.Be("https://demoqa.com/radio-button")
+                .RadioButtonPageH1.Should.Be("Radio Button")
+                .DoYouLikeText.Should.Be("Do you like the site?");
         }
 
-        //Homework Lesson_9
-        //TODO : 
+        [Test]
+        [Description("Verify Yes radiobutton")]
+        [Retry(2)]
+        public void VerifyYesRadioButton()
+        {
+            Go.To<RadioButtonPage>()
+                .YesLabel.Should.BeVisible()
+                .YesLabel.Click()
+                .YesRadioButton.Should.BeChecked()
+                .SuccessText.Should.Be("You have selected Yes");
+        }
 
-        //TC-2 : Verify Impressive radio Button can be checked and display text 'You have selected Impressive'
-        //[Test]
-        //[Description("Verify Impressive radio Button can be checked and display text 'You have selected Impressive'")]
-        //public void VerifyImpressiveRadioButton()
-        //{
-        //    Go.To<DemoQARadioButtonPage>().
-        //        RadioButtons[x => x.Label.Content.Value.Equals("Impressive")].Label.Click().
-        //}
+        [Test]
+        [Description("Verify Impressive radiobutton")]
+        [Retry(2)]
+        public void VerifyImpressiveRadioButton()
+        {
+            Go.To<RadioButtonPage>()
+                .ImpressiveLabel.Should.BeVisible()
+                .ImpressiveLabel.Click()
+                .ImpressiveRadioButtom.Should.BeChecked()
+                .SuccessText.Should.Be("You have selected Impressive");
+        }
 
-        //TC-3 : Verify No radio Button disabled and not show text 'You have selected'
-        //TC-4 : Verify H1 Radio Button is visible
-        //TC-5 : Verify text 'You have selected Impressive' is not visible after page refresh
-
+        [Test]
+        [Description("Verify No radiobutton")]
+        [Retry(2)]
+        public void VerifyNoRadioButton()
+        {
+            Go.To<RadioButtonPage>()
+                .NoLabel.Should.BeVisible()
+                .NoLabel.Click()
+                .NoRadioButton.Should.BeDisabled()
+                .NoRadioButton.Should.Not.BeChecked();
+        }
     }
 }

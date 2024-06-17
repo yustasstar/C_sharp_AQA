@@ -1,4 +1,4 @@
 # hilel-aqa
 hillelAutomation
 
-# test strategy for this project located here https://docs.google.com/document/d/123htSZDa3wec2w2if-woBhfB98rRsK_dLVORyqai4Ok/edit?usp=sharing
+Test Strategy: https://app.clickup.com/9015691592/v/dc/8cp12a8-455
