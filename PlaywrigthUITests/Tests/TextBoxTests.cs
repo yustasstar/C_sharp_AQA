@@ -13,54 +13,58 @@ namespace PlaywrigthUITests.Tests
             _TextBoxPage = new PO_TextBoxPage(Page);
         }
 
+        //Test DATA:_______________________________________
+        private string testPlaceholder = "Full Name";
+        private string testLabel = "Full Name";
+        private string testFullName = "Test Name 123";
+        private string testEmail = "TestEmail@test.net";
+        private string testCurrentAddress = "Test Current Adress 123";
+        private string testPermanentAddress = "Test Permanent Address 123";
+        //_________________________________________________
+
         [Test]
-        [Description("Text 'Full Name' should be visible")]
-        public async Task VerifyTextFullName()
+        [Description("TextBox Page H1 'Text Box' should be visible")]
+        public async Task VerifyTextBoxPageH1()
         {
             await _TextBoxPage.GoToTextBoxPage();
-            var isVisible = await _TextBoxPage.IsFullNameTextlVisible();
-            Assert.That(isVisible, Is.True, "The element with text 'Full Name' is not visible.");
+            await _TextBoxPage.IsTextBoxPageH1Visible();
         }
 
         [Test]
-        [Description("FullName Placeholder should be visible")]
-        public async Task VerifyFullNamePlaceholder()
+        [Description("Label 'Full Name' should be visible")]
+        public async Task VerifyFullNameLabel()
         {
             await _TextBoxPage.GoToTextBoxPage();
-            var isVisible = await _TextBoxPage.IsFullNamePlaceholderVisible();
-            Assert.That(isVisible, Is.True, "The element with placeholder 'Full Name' should be visible.");
+            await _TextBoxPage.IsFullNameLabelVisible();
         }
 
         [Test]
-        [Description("Enter 'Test Name 123' in Text Full Name Input, press submit, text Name should be 'Name:John Doe'")]
-        public async Task VerifyFilledTextFullName()
+        [Description("Enter {testFullName} in Full Name input, press submit, text Name should be 'Name:{testFullName}'")]
+        public async Task VerifyFullNameFilled()
         {
             await _TextBoxPage.GoToTextBoxPage();
-            await _TextBoxPage.FillFullName("Test Name 123");
-            await _TextBoxPage.isFullNameFocused();
+            await _TextBoxPage.FillFullName(testFullName);
+            await _TextBoxPage.IsFullNameFocused();
             await _TextBoxPage.ClickSubmitButton();
-            await _TextBoxPage.isSubmitButtonFocused();
-            var isVisible = await _TextBoxPage.IsNameVisible("Test Name 123");
-            Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should be visible.");
+            await _TextBoxPage.IsSubmitButtonFocused();
+            await _TextBoxPage.VerifyFullNameOutput(testFullName);
         }
 
         [Test]
-        [Description("Clear Text Full Name Input, press submit, text Name should not be visible")]
-        public async Task VerifyTextClearFullName()
+        [Description("Clear 'Full Name' Input, press submit, text 'Name:{testFullName} should not be visible")]
+        public async Task VerifyFullNameInput()
         {
             await _TextBoxPage.GoToTextBoxPage();
-            await _TextBoxPage.FillFullName("Test Name 123");
-            await _TextBoxPage.isFullNameFocused();
+            await _TextBoxPage.FillFullName(testFullName);
+            await _TextBoxPage.IsFullNameFocused();
             await _TextBoxPage.ClickSubmitButton();
-            await _TextBoxPage.isSubmitButtonFocused();
-            var isVisible = await _TextBoxPage.IsNameVisible("Test Name 123");
-            Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should be visible.");
-
-            //await _TextBoxPage.GoToTextBoxPage();
+            await _TextBoxPage.IsSubmitButtonFocused();
+            await _TextBoxPage.VerifyFullNameOutput(testFullName);
+            
             await _TextBoxPage.ClearFullNameInput();
             await _TextBoxPage.ClickSubmitButton();
-            await _TextBoxPage.isSubmitButtonFocused();
-            Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should not be visible.");
+            await _TextBoxPage.IsSubmitButtonFocused();
+            await _TextBoxPage.VerifyFullNameOutputCleared(testFullName);
         }
     }
 }
