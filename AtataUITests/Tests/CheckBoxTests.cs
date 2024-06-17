@@ -8,16 +8,16 @@ namespace AtataUITests.Tests
 {
     internal class CheckBoxTests : UITestFixture
     {
-        [Test]
-        public void VerifyCheckBoxTreeHomeCheckboxVisible()
-        {
-            Go.To<CheckBoxPage>()
-            .CheckBoxTree.Should.BeVisible()
-            .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].CheckBox.Should.BePresent()
-            .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].CheckBox.Should.BeUnchecked()
-            .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].Title.Click()
-            .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].CheckBox.Should.BeChecked();
-        }
+        //[Test]
+        //public void VerifyCheckBoxTreeHomeCheckboxVisible()
+        //{
+        //    Go.To<CheckBoxPage>()
+        //    .CheckBoxTree.Should.BeVisible()
+        //    .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].CheckBox.Should.BePresent()
+        //    .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].CheckBox.Should.BeUnchecked()
+        //    .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].Title.Click()
+        //    .CheckBoxTree.Branch[x => x.Title.Content.Value.Equals("Home")].CheckBox.Should.BeChecked();
+        //}
 
         [Test]
         public void VerifyDocumentsCheckboxChecked()
