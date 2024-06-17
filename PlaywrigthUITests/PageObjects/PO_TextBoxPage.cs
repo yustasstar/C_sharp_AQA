@@ -13,7 +13,9 @@ namespace PlaywrigthUITests.PageObjects
     {
         private IPage page;
         public string TextBoxPageUrl = "https://demoqa.com/text-box";
+        private string TextBoxPageH1 = "Text Box";
         private string fullNamePlaceholder = "Full Name";
+        private string fullNameLabel = "Full Name";
         private string submitButtonRole = "button";
         private string submitButtonName = "Submit";
 
@@ -27,25 +29,26 @@ namespace PlaywrigthUITests.PageObjects
             //await page.WaitForURLAsync(TextBoxPageUrl);
         }
 
-        public async Task<bool> IsFullNameTextlVisible()
+        public async Task IsTextBoxPageH1Visible()
         {
-            return await page.GetByText("Full Name").IsVisibleAsync();
+            await Assertions.Expect(page.GetByRole(AriaRole.Heading, new() { Name = TextBoxPageH1 })).ToBeVisibleAsync();
         }
 
-        public async Task<bool> IsFullNamePlaceholderVisible()
+        public async Task IsFullNameLabelVisible()
         {
-            return await page.GetByPlaceholder(fullNamePlaceholder).IsVisibleAsync();
+            await Assertions.Expect(page.Locator("#userName-wrapper div").Filter(new() { HasText = fullNameLabel })).ToBeVisibleAsync();
         }
 
-        public async Task FillFullName(string fullName)
+        public async Task FillFullName(string fullNameText)
         {
-            await page.GetByPlaceholder(fullNamePlaceholder).FillAsync(fullName);
+            await page.GetByPlaceholder(fullNamePlaceholder).FillAsync(fullNameText);
+            await Assertions.Expect(page.GetByPlaceholder(fullNamePlaceholder)).ToHaveValueAsync(fullNameText);
         }
 
-        public async Task isFullNameFocused()
+        public async Task IsFullNameFocused()
         {
             await page.GetByPlaceholder(fullNamePlaceholder).ClickAsync();
-            await Assertions.Expect(page.GetByPlaceholder("Full Name")).ToBeFocusedAsync();
+            await Assertions.Expect(page.GetByPlaceholder(fullNamePlaceholder)).ToBeFocusedAsync();
         }
 
         public async Task ClickSubmitButton()
@@ -53,7 +56,7 @@ namespace PlaywrigthUITests.PageObjects
             await page.GetByRole(AriaRole.Button, new() { Name = submitButtonName }).ClickAsync();
         }
 
-        public async Task isSubmitButtonFocused()
+        public async Task IsSubmitButtonFocused()
         {
             var submitButton = page.GetByRole(AriaRole.Button, new() { Name = submitButtonName });
             await submitButton.ClickAsync();
@@ -65,14 +68,18 @@ namespace PlaywrigthUITests.PageObjects
             await page.GetByPlaceholder(fullNamePlaceholder).ClearAsync();
         }
 
-        public async Task<bool> IsNameVisible(string name)
+        public async Task VerifyFullNameOutput(string testFullName)
         {
-            return await page.GetByText($"Name:{name}").IsVisibleAsync();
+            await Assertions.Expect(page.Locator("#output div")).ToHaveTextAsync($"Name:{testFullName}");
+        }
+        public async Task VerifyFullNameOutputCleared(string testFullName)
+        {
+            await Assertions.Expect(page.Locator("#output div")).Not.ToHaveTextAsync($"Name:{testFullName}");
         }
 
-        public async Task<bool> IsNameHidden(string name)
-        {
-            return await page.GetByText($"Name:{name}").IsHiddenAsync();
-        }
+        //public async Task<bool> IsNameHidden(string testFullName)
+        //{
+        //    return await page.GetByText($"Name:{testFullName}").IsHiddenAsync();
+        //}
     }
 }
