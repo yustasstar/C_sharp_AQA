@@ -56,11 +56,11 @@ namespace PlaywrigthUITests.Tests
             var isVisible = await _TextBoxPage.IsNameVisible("Test Name 123");
             Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should be visible.");
 
-        //    await _TextBoxPage.GoToTextBoxPage();
-        //    await _TextBoxPage.ClearFullNameInput();
-        //    await _TextBoxPage.ClickSubmitButton();
-        //    await _TextBoxPage.isSubmitButtonFocused();
-        //    Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should not be visible.");
-        //}
+            await _TextBoxPage.GoToTextBoxPage();
+            await _TextBoxPage.ClearFullNameInput();
+            await _TextBoxPage.ClickSubmitButton();
+            await _TextBoxPage.isSubmitButtonFocused();
+            Assert.That(isVisible, Is.True, "The element with text 'Name:Test Name 123' should not be visible.");
+        }
     }
 }
