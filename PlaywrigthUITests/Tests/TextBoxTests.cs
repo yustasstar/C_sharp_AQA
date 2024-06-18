@@ -29,7 +29,7 @@ namespace PlaywrigthUITests.Tests
         //_________________________________________________
 
         [Test]
-        [Description("TextBox Page H1 'Text Box' should be visible")]
+        [Description("H1 'Text Box' should be visible")]
         public async Task VerifyTextBoxPageH1()
         {
             await _TextBoxPage.GoToURL(PageUrl);
@@ -45,7 +45,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Description("Enter {FullName} in Full Name input, press submit, text Name should be 'Name:{FullName}'")]
+        [Description("Enter {FullName} in 'Full Name' input, press 'Submit' btn, text should be 'Name:{FullName}'")]
         public async Task VerifyFullNameFilled()
         {
             await _TextBoxPage.GoToURL(PageUrl);
@@ -57,7 +57,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Description("Clear 'Full Name' Input, press submit, text 'Name:{FullName} should not be visible")]
+        [Description("Clear 'Full Name' input, click Submit, output should be cleared")]
         public async Task VerifyFullNameInput()
         {
             await _TextBoxPage.GoToURL(PageUrl);
