@@ -46,7 +46,7 @@ namespace PlaywrigthUITests.Tests
 
         [Test]
         [Description("Enter {FullName} in 'Full Name' input, press 'Submit' btn, text should be 'Name:{FullName}'")]
-        public async Task VerifyFullNameFilled()
+        public async Task VerifyFullNameInput()
         {
             await _TextBoxPage.GoToURL(PageUrl);
             await _TextBoxPage.FillInput(FullName, fullNamePlaceholder);
@@ -58,7 +58,7 @@ namespace PlaywrigthUITests.Tests
 
         [Test]
         [Description("Clear 'Full Name' input, click Submit, output should be cleared")]
-        public async Task VerifyFullNameInput()
+        public async Task VerifyFullNameOutput()
         {
             await _TextBoxPage.GoToURL(PageUrl);
             await _TextBoxPage.FillInput(FullName, fullNamePlaceholder);
@@ -66,7 +66,6 @@ namespace PlaywrigthUITests.Tests
             await _TextBoxPage.ClickButton(SubmitBtn);
             await _TextBoxPage.IsButtonFocused(SubmitBtn);
             await _TextBoxPage.VerifyOutputValue(FullName);
-
             await _TextBoxPage.ClearInput(fullNamePlaceholder);
             await _TextBoxPage.ClickButton(SubmitBtn);
             await _TextBoxPage.VerifyOutputCleared();
