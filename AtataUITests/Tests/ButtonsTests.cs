@@ -7,7 +7,7 @@ namespace AtataUITests.Tests
     {
         [Test]
         [Retry(2)]
-        [Category("ButtonTests")]
+        //[Category("ButtonTests")]
         [Description("Verify Buttons page Text")]
         public void VerifyTextButtonsPage()
         {
