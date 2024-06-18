@@ -25,4 +25,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test_Atata
-      run: dotnet test --no-build --verbosity normal AtataUITests\bin\Debug\net8.0\AtataUITests.dll --filter "Category=UI", "Category=CheckBox Tests"
+      run: dotnet test --no-build --verbosity normal AtataUITests\bin\Debug\net8.0\AtataUITests.dll --filter "Category=UI|Category=CheckBoxTests"
