@@ -20,6 +20,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
+        [Category("CheckBox Tests")]
         public async Task VerifyHomeTreeItems()
         {
             //Preconditions:
@@ -45,6 +46,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
+        [Category("CheckBox Tests")]
         [Description("Verify First Child items tree")]
         public async Task VerifyFirstChildItems()
         {
@@ -79,6 +81,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
+        [Category("CheckBox Tests")]
         [Description("Verify Second Child items tree")]
         public async Task VerifySecondChildItems()
         {
@@ -117,6 +120,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
+        [Category("CheckBox Tests")]
         [Description("Verify Expand/Collapse All checkbox visability")]
         public async Task VerifyExpandCollapseAll()
         {
