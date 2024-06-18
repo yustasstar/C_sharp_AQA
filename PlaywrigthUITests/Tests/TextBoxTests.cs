@@ -29,7 +29,7 @@ namespace PlaywrigthUITests.Tests
         //_________________________________________________
 
         [Test]
-        [Category("UI")]
+        [Category("TextBox")]
         [Description("H1 'Text Box' should be visible")]
         public async Task VerifyTextBoxPageH1()
         {
@@ -38,7 +38,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("UI")]
+        [Category("TextBox")]
         [Description("Label 'Full Name' should be visible")]
         public async Task VerifyFullNameLabel()
         {
@@ -47,7 +47,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("UI")]
+        [Category("TextBox")]
         [Description("Enter {FullName} in 'Full Name' input, press 'Submit' btn, text should be 'Name:{FullName}'")]
         public async Task VerifyFullNameInput()
         {
@@ -60,7 +60,7 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("UI")]
+        [Category("TextBox")]
         [Description("Clear 'Full Name' input, click Submit, output should be cleared")]
         public async Task VerifyFullNameOutput()
         {
