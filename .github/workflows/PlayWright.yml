@@ -25,4 +25,5 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test_PlayWright
-      run: dotnet test --no-build --verbosity normal PlaywrigthUITests\bin\Debug\net8.0\PlaywrigthUITests.dll --filter "Category=UI|Category=TextBox|Category=CheckBoxTests"
+      run: dotnet test --no-build --verbosity normal PlaywrigthUITests\bin\Debug\net8.0\PlaywrigthUITests.dll --filter "Category=TextBoxTests|Category=ButtonTests|Category=CheckBoxTests"
+
