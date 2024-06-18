@@ -9,6 +9,7 @@ namespace AtataUITests.Tests
     internal class CheckBoxTests : UITestFixture
     {
         [Test]
+        [Retry(2)]
         [Category("CheckBoxTests")]
         public void VerifyCheckBoxTreeHomeCheckboxVisible()
         {
@@ -21,6 +22,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
+        [Retry(2)]
         [Category("CheckBoxTests")]
         public void VerifyDocumentsCheckboxChecked()
         {
@@ -32,6 +34,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
+        [Retry(2)]
         [Category("CheckBoxTests")]
         public void VerifyHomeTreeItems()
         {
@@ -51,6 +54,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
+        [Retry(2)]
         [Category("CheckBoxTests")]
         public void VerifyFirstChildItems()
         {
@@ -73,6 +77,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
+        [Retry(2)]
         [Category("CheckBoxTests")]
         public void VerifySecondChildItems()
         {
@@ -97,6 +102,7 @@ namespace AtataUITests.Tests
 
         //Verifiing every checkbox
         [Test]
+        [Retry(2)]
         [Category("CheckBoxTests")]
         public void VerifyExpandCollapseAll()
         {

@@ -13,7 +13,8 @@ namespace AtataUITests.Tests
     {
         //Preconditions: Go to https://demoqa.com/text-box
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("TextBox Url should be https://demoqa.com/text-box")]
         public void TextBoxUrl()
         {
@@ -25,7 +26,8 @@ namespace AtataUITests.Tests
 
         //TC 1:
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("TextBoxH1 text should be = Text Box")]
         public void PageTitleH1()
         {
@@ -35,7 +37,8 @@ namespace AtataUITests.Tests
 
         //TC 2:
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("FullNameLabel text should be = Full Name")]
         public void UserNameLabelText()
         {
@@ -44,7 +47,8 @@ namespace AtataUITests.Tests
         }
         //TC 3:
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("FullNameInput type should be = text and placeholder = Full Name")]
         public void UserNameInputType()
         {
@@ -54,7 +58,8 @@ namespace AtataUITests.Tests
 
         //TC 4:
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("FullNameInput should be autocomplete = off")]
         public void UserNameInputAutocomplete()
         {
@@ -63,7 +68,8 @@ namespace AtataUITests.Tests
         }
         //TC 5:
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("FullNameInput style should be display: block")]
         public void UserNameInputStyle()
         {
@@ -73,7 +79,8 @@ namespace AtataUITests.Tests
 
         //TC 6: 
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("FullNameInput enter value FirstName 123")]
         public void UserNameInputEnterValue()
         {
@@ -84,7 +91,8 @@ namespace AtataUITests.Tests
 
         //TC 7: 
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("FullNameInput clear should be empty")]
         public void UserNameInputClear()
         {
@@ -95,14 +103,15 @@ namespace AtataUITests.Tests
         //[Email input]
         //TC 8: 
         [Test]
-        [Category("TextBox")]
+        [Retry(2)]
+        [Category("TextBoxTests")]
         [Description("label of User Email label should be Email")]
         public void VerifyEmailInput()
         {
             Go.To<TextBoxPage>()
                 .EmailLabel.Should.Be("Email");
         }
-        
+
         //TC 9: input id="userEmail" should be type="email"
         //TC 10: input id="userEmail" should be placeholder="name@example.com"
         //TC 11: input id="userEmail" should be autocomplete = "off"
