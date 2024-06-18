@@ -9,7 +9,7 @@ namespace AtataUITests.Tests
     internal class CheckBoxTests : UITestFixture
     {
         [Test]
-        [Category("CheckBox Tests")]
+        [Category("CheckBoxTests")]
         public void VerifyCheckBoxTreeHomeCheckboxVisible()
         {
             Go.To<CheckBoxPage>()
@@ -21,7 +21,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
-        [Category("CheckBox Tests")]
+        [Category("CheckBoxTests")]
         public void VerifyDocumentsCheckboxChecked()
         {
             Go.To<CheckBoxPage>()
@@ -32,7 +32,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
-        [Category("CheckBox Tests")]
+        [Category("CheckBoxTests")]
         public void VerifyHomeTreeItems()
         {
             List<string> checkboxLabels = new List<string>
@@ -51,7 +51,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
-        [Category("CheckBox Tests")]
+        [Category("CheckBoxTests")]
         public void VerifyFirstChildItems()
         {
             List<string> checkboxChildLabels = new List<string>
@@ -73,7 +73,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
-        [Category("CheckBox Tests")]
+        [Category("CheckBoxTests")]
         public void VerifySecondChildItems()
         {
             List<string> checkboxChildLabels = new List<string>
@@ -97,7 +97,7 @@ namespace AtataUITests.Tests
 
         //Verifiing every checkbox
         [Test]
-        [Category("CheckBox Tests")]
+        [Category("CheckBoxTests")]
         public void VerifyExpandCollapseAll()
         {
             Go.To<CheckBoxPage>()
