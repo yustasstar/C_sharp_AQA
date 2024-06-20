@@ -26,3 +26,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test_Atata_TextBoxTests
       run: dotnet test --no-build --verbosity normal AtataUITests\bin\Debug\net8.0\AtataUITests.dll --filter "Category=TextBoxTests"
+    - name: Test_Atata_ButtonsTests
+      run: dotnet test --no-build --verbosity normal AtataUITests\bin\Debug\net8.0\AtataUITests.dll --filter "Category=ButtonTests"
