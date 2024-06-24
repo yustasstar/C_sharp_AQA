@@ -1,0 +1,26 @@
+name: Atata_Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test_Atata_TextBoxTests
+      run: dotnet test --no-build --verbosity normal --filter "Category=TextBoxTests" AtataUITests/AtataUITests.csproj
+    - name: Test_Atata_ButtonTests
+      run: dotnet test --no-build --verbosity normal --filter "Category=ButtonTests" AtataUITests/AtataUITests.csproj
