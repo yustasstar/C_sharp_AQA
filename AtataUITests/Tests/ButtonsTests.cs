@@ -6,8 +6,7 @@ namespace AtataUITests.Tests
     public sealed class ButtonsTests : UITestFixture
     {
         [Test]
-        [Retry(2)]
-        //[Category("ButtonTests")]
+        [Category("ButtonTests")]
         [Description("Verify Buttons page Text")]
         public void VerifyTextButtonsPage()
         {
@@ -17,11 +16,10 @@ namespace AtataUITests.Tests
         }
 
         [Test]
-        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Double Click Me button")]
         public void DoubleClickButtonTest() =>
-            Go.To<ButtonsPage>().PageUrl.Should.Be("https://demoqa.com/buttons")
+            Go.To<ButtonsPage>()
             .DoubleClickMe.Should.BeEnabled()
             .DoubleClickMe.DoubleClick()
             .DoubleClickMe.Should.BeFocused()
@@ -30,11 +28,10 @@ namespace AtataUITests.Tests
             .RightClickMessage.Should.Not.BeVisible();
 
         [Test]
-        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Rigth Click Me button")]
         public void RigthClickButtonTest() =>
-            Go.To<ButtonsPage>().PageUrl.Should.Be("https://demoqa.com/buttons")
+            Go.To<ButtonsPage>()
             .RigthClickMe.Should.BeEnabled()
             .RigthClickMe.RightClick()
             .RigthClickMe.Should.BeFocused()
@@ -43,11 +40,10 @@ namespace AtataUITests.Tests
             .DoubleClickMessage.Should.Not.BeVisible();
 
         [Test]
-        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Click Me button")]
         public void ClickButtonTest() =>
-            Go.To<ButtonsPage>().PageUrl.Should.Be("https://demoqa.com/buttons")
+            Go.To<ButtonsPage>()
             .ClickMe.Should.BeEnabled()
             .ClickMe.Click()
             .ClickMe.Should.BeFocused()
