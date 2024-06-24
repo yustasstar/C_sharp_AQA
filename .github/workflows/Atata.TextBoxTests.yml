@@ -1,4 +1,4 @@
-name: Atata_Workflow
+name: Atata_TextBoxTests
 
 on:
   push:
