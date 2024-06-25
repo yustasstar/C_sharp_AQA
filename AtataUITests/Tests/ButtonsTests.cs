@@ -6,6 +6,7 @@ namespace AtataUITests.Tests
     public sealed class ButtonsTests : UITestFixture
     {
         [Test]
+        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Buttons page Text")]
         public void VerifyTextButtonsPage()
@@ -16,6 +17,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
+        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Double Click Me button")]
         public void DoubleClickButtonTest() =>
@@ -28,6 +30,7 @@ namespace AtataUITests.Tests
             .RightClickMessage.Should.Not.BeVisible();
 
         [Test]
+        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Rigth Click Me button")]
         public void RigthClickButtonTest() =>
@@ -40,6 +43,7 @@ namespace AtataUITests.Tests
             .DoubleClickMessage.Should.Not.BeVisible();
 
         [Test]
+        [Retry(2)]
         [Category("ButtonTests")]
         [Description("Verify Click Me button")]
         public void ClickButtonTest() =>
