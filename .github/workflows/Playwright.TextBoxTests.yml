@@ -1,11 +1,8 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: PlayWright.TextBoxTests
+name: Playwright_TextBoxTests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Playwright_Workflow" ]
   pull_request:
     branches: [ "main" ]
 
@@ -24,6 +21,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test_PlayWright_TextBoxPage
+    - name: Playwright.TextBoxTests
       run: dotnet test --no-build --verbosity normal PlaywrigthUITests\bin\Debug\net8.0\PlaywrigthUITests.dll --filter "Category=TextBoxTests"
 
