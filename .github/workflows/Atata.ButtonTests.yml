@@ -1,7 +1,4 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: Atata_ButtonTests
 
 on:
   push:
@@ -25,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Atata.ButtonTests
-      run: dotnet test --no-build --verbosity normal AtataUITests\bin\Debug\net8.0\AtataUITests.dll --filter "Category=ButtonTests"
+      run: dotnet test --no-build --verbosity normal --filter "Category=ButtonTests" AtataUITests/AtataUITests.csproj
