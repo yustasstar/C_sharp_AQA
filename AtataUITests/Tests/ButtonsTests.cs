@@ -47,7 +47,7 @@ namespace AtataUITests.Tests
         //[Category("ButtonTests")]
         [Description("Verify Click Me button")]
         public void ClickButtonTest() =>
-            Go.To<ButtonsPage>()//.ScrollDown()
+            Go.To<ButtonsPage>().ScrollDown()
             .ClickMe.Should.BeEnabled()
             .ClickMe.Click()
             .ClickMe.Should.BeFocused()
