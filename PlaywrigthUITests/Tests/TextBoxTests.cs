@@ -22,9 +22,9 @@ namespace PlaywrigthUITests.Tests
         private string fullNameLabel = "Full Name";
         //Inputs:
         private string FullName = "Test Name 123";
-        private string Email = "TestEmail@test.net";
-        private string CurrentAddress = "Test Current Adress 123";
-        private string PermanentAddress = "Test Permanent Address 123";
+        //private string Email = "TestEmail@test.net";
+        //private string CurrentAddress = "Test Current Adress 123";
+        //private string PermanentAddress = "Test Permanent Address 123";
         private string SubmitBtn = "Submit";
         //_________________________________________________
 
