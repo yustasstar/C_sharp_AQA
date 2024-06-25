@@ -82,7 +82,9 @@ namespace Homework
             // Sort sortedArray in place
             Array.Sort(sortedArray);
             Assert.That(sortedArray, Is.Ordered.Ascending, "sortedArray is ordered DESC");
-            CollectionAssert.IsOrdered(sortedArray, "The sorted array is not in ascending order."); //2nd variant
+            //CollectionAssert.IsOrdered(sortedArray, "The sorted array is not in ascending order."); //2nd variant
+            Assert.That(sortedArray, Is.Ordered, "The sorted array is not in ascending order.");
+
         }
 
         [Test]
