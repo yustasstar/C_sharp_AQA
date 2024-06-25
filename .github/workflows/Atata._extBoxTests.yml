@@ -20,5 +20,5 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test_Atata_TextBoxTests
+    - name: Atata.TextBoxTests
       run: dotnet test --no-build --verbosity normal --filter "Category=TextBoxTests" AtataUITests/AtataUITests.csproj
