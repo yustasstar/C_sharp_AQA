@@ -2,7 +2,7 @@ name: Atata_TextBoxTests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Atata_Workflow" ]
   pull_request:
     branches: [ "main" ]
 
