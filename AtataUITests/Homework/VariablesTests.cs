@@ -4,7 +4,10 @@ namespace Homework
 {
     public sealed class VariablesTests : UITestFixture
     {
-        protected static string Combine(int higth) => "higth equals " + higth;
+        protected static string Combine(int higth)
+        {
+            return "higth equals " + higth;
+        }
 
         [Test]
         [Description("TC-21 higth expected to be bigger than low")]

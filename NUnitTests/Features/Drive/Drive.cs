@@ -32,7 +32,7 @@
         public void PresetupTest()
         {
             DrivePresetup presetup = new DrivePresetup();
-            presetup.Accelerate;
+            //presetup.Accelerate;
         }
     }
 }
