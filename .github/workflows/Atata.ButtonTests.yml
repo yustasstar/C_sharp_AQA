@@ -1,8 +1,8 @@
-name: Playwright_TextBoxTests
+name: Atata_ButtonTests
 
 on:
   push:
-    branches: [ "Playwright_Workflow" ]
+    branches: [ "Atata_Workflow" ]
   pull_request:
     branches: [ "main" ]
 
@@ -21,6 +21,5 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Playwright.TextBoxTests
-      run: dotnet test --no-build --verbosity normal PlaywrigthUITests\bin\Debug\net8.0\PlaywrigthUITests.dll --filter "Category=TextBoxTests"
-
+    - name: Atata.ButtonTests
+      run: dotnet test --no-build --verbosity normal --filter "Category=ButtonTests" AtataUITests/AtataUITests.csproj
