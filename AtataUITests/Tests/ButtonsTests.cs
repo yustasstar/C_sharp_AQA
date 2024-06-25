@@ -2,12 +2,12 @@
 
 namespace AtataUITests.Tests
 {
-    [Description("Verify Text on Buttons page")]
+    [Category("ButtonTests")]
     public sealed class ButtonsTests : UITestFixture
     {
         [Test]
         [Retry(2)]
-        [Category("ButtonTests")]
+        //[Category("ButtonTests")]
         [Description("Verify Buttons page Text")]
         public void VerifyTextButtonsPage()
         {
@@ -18,7 +18,7 @@ namespace AtataUITests.Tests
 
         [Test]
         [Retry(2)]
-        [Category("ButtonTests")]
+        //[Category("ButtonTests")]
         [Description("Verify Double Click Me button")]
         public void DoubleClickButtonTest() =>
             Go.To<ButtonsPage>()//.ScrollDown()
@@ -31,7 +31,7 @@ namespace AtataUITests.Tests
 
         [Test]
         [Retry(2)]
-        [Category("ButtonTests")]
+        //[Category("ButtonTests")]
         [Description("Verify Rigth Click Me button")]
         public void RigthClickButtonTest() =>
             Go.To<ButtonsPage>()//.ScrollDown()
@@ -44,7 +44,7 @@ namespace AtataUITests.Tests
 
         [Test]
         [Retry(2)]
-        [Category("ButtonTests")]
+        //[Category("ButtonTests")]
         [Description("Verify Click Me button")]
         public void ClickButtonTest() =>
             Go.To<ButtonsPage>()//.ScrollDown()
