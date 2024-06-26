@@ -3,6 +3,7 @@
 namespace PlaywrigthUITests.Tests
 {
     [TestFixture]
+    [Category("TextBoxTests")]
     internal class TextBoxTests : UITestFixture
     {
         private PO_TextBoxPage _TextBoxPage;

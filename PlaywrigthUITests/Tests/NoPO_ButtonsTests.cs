@@ -2,6 +2,7 @@
 using NUnitTests.Features.Drive;
 namespace PlaywrigthUITests.Tests
 {
+    [Category("NoPO_ButtonsTests")]
     [Description("Verify Buttons on buttons page")]
     class NoPO_ButtonsTests : UITestFixture
     {
