@@ -2,7 +2,7 @@ name: Atata_ButtonTests
 
 on:
   push:
-    branches: [ "Atata_Workflow" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
