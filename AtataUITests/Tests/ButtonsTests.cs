@@ -21,7 +21,7 @@ namespace AtataUITests.Tests
         //[Category("ButtonTests")]
         [Description("Verify Double Click Me button")]
         public void DoubleClickButtonTest() =>
-            Go.To<ButtonsPage>()//.ScrollDown()
+            Go.To<ButtonsPage>().ScrollDown()
             .DoubleClickMe.Should.BeEnabled()
             .DoubleClickMe.DoubleClick()
             .DoubleClickMe.Should.BeFocused()
@@ -34,7 +34,7 @@ namespace AtataUITests.Tests
         //[Category("ButtonTests")]
         [Description("Verify Rigth Click Me button")]
         public void RigthClickButtonTest() =>
-            Go.To<ButtonsPage>()//.ScrollDown()
+            Go.To<ButtonsPage>().ScrollDown()
             .RigthClickMe.Should.BeEnabled()
             .RigthClickMe.RightClick()
             .RigthClickMe.Should.BeFocused()
