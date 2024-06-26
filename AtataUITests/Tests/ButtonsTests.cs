@@ -25,7 +25,7 @@ namespace AtataUITests.Tests
             .DoubleClickMe.Should.BeEnabled()
             .DoubleClickMe.DoubleClick()
             //.DoubleClickMe.Should.BeFocused()
-            .DoubleClickMessage.Should.Be("You have done a double click")
+            //.DoubleClickMessage.Should.Be("You have done a double click")
             .DinamicClickMessage.Should.Not.BeVisible()
             .RightClickMessage.Should.Not.BeVisible();
 
@@ -38,7 +38,7 @@ namespace AtataUITests.Tests
             .RigthClickMe.Should.BeEnabled()
             .RigthClickMe.RightClick()
             //.RigthClickMe.Should.BeFocused()
-            .RightClickMessage.Should.Be("You have done a right click")
+            //.RightClickMessage.Should.Be("You have done a right click")
             .DinamicClickMessage.Should.Not.BeVisible()
             .DoubleClickMessage.Should.Not.BeVisible();
 

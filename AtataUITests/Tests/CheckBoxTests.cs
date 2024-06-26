@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 
 namespace AtataUITests.Tests  
 {
-    [Category("CheckBoxTests")]
+    //[Category("CheckBoxTests")]
     internal class CheckBoxTests : UITestFixture
     {
         [Test]

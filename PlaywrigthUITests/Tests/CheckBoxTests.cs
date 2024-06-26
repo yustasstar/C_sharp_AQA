@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlaywrigthUITests.Tests
 {
+    //[Category("CheckBoxTests")]
     internal class CheckBoxTests : UITestFixture
     {
         private PO_CheckBoxPage _CheckBoxPage;
@@ -20,7 +21,6 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("CheckBoxTests")]
         public async Task VerifyHomeTreeItems()
         {
             //Preconditions:
@@ -46,7 +46,6 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("CheckBoxTests")]
         [Description("Verify First Child items tree")]
         public async Task VerifyFirstChildItems()
         {
@@ -81,7 +80,6 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("CheckBoxTests")]
         [Description("Verify Second Child items tree")]
         public async Task VerifySecondChildItems()
         {
@@ -120,7 +118,6 @@ namespace PlaywrigthUITests.Tests
         }
 
         [Test]
-        [Category("CheckBoxTests")]
         [Description("Verify Expand/Collapse All checkbox visability")]
         public async Task VerifyExpandCollapseAll()
         {

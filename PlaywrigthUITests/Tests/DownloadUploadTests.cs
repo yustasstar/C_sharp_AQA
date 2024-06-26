@@ -2,7 +2,8 @@
 
 namespace PlaywrigthUITests.Tests
 {
-    internal class DownloadUploadTest : UITestFixture
+    [Category("DownloadUploadTests")]
+    internal class DownloadUploadTests : UITestFixture
     {
         private PO_DownloadPage _UpDownloadPage;
 

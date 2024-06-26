@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PlaywrigthUITests.Tests
 {
+    [Category("RadioButtonsTests")]
     internal class RadioButtonsTests : UITestFixture
     {
         private PO_RadioButtonPage _RadioButtonPage;

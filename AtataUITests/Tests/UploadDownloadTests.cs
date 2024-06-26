@@ -8,9 +8,11 @@ using System.Diagnostics;
 
 namespace AtataUITests.Tests
 {
+    //[Category("UploadDownloadTests")]
     internal class UploadDownloadTests : UITestFixture
     {
         [Test]
+        [Category("UploadDownloadTests")]
         public void VerifyPageH1()
         {
             Go.To<UploadDownloadPage>()
