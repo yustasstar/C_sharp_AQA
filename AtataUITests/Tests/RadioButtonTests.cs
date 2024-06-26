@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AtataUITests.Tests
 {
-    [Category("RadioButtonTests")]
+    //[Category("RadioButtonTests")]
     internal class RadioButtonTests : UITestFixture
     {
         [Test]
@@ -53,7 +53,7 @@ namespace AtataUITests.Tests
         {
             Go.To<RadioButtonPage>()
                 .NoLabel.Should.BeVisible()
-                //.NoLabel.Click()
+                .NoLabel.Click()
                 .NoRadioButton.Should.BeDisabled()
                 .NoRadioButton.Should.Not.BeChecked();
         }

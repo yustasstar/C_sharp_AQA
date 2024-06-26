@@ -20,7 +20,6 @@ namespace AtataUITests.Tests
         }
 
         [Test]
-        [Category("UploadDownloadTests")]
         public void VerifFileUpload()
         {
             Go.To<UploadDownloadPage>()
