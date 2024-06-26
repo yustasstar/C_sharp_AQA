@@ -2,7 +2,7 @@ name: Playwright_TextBoxTests
 
 on:
   push:
-    branches: [ "Playwright_Workflow" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
