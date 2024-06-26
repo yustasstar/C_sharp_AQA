@@ -19,24 +19,24 @@ namespace AtataUITests.PageObjects
         public Text<_> SuccessText { get; set; }
 
         //Yes Radio:
-        [FindById("yesRadio")]
+        [FindByLabel("Yes")]
         public RadioButton<_> YesRadioButton { get; set; }
 
-        [FindByClass("custom-control-label")]
+        [FindByLabel("Yes")]
         public Label<_> YesLabel { get; set; }
 
         //Impressive Radio:
-        [FindById("impressiveRadio")]
+        [FindByLabel("Impressive")]
         public RadioButton<_> ImpressiveRadioButtom{ get; set; }
 
         [FindByLabel("Impressive")]
         public Label<_> ImpressiveLabel { get; set; }
 
         //No Radio:
-        [FindById("noRadio")]
+        [FindByLabel("No")]
         public RadioButton<_> NoRadioButton { get; set; }
 
-        [FindByClass("custom-control-label")]
+        [FindByLabel("No")]
         public Label<_> NoLabel { get; set; }
     }
 }

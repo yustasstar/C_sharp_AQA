@@ -11,7 +11,7 @@ namespace AtataUITests.Tests
     {
         [Test]
         [Retry(2)]
-        [Category("CheckBoxTests")]
+        //[Category("CheckBoxTests")]
         public void VerifyCheckBoxTreeHomeCheckboxVisible()
         {
             Go.To<CheckBoxPage>()
