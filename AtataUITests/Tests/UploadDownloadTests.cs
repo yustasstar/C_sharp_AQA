@@ -8,10 +8,11 @@ using System.Diagnostics;
 
 namespace AtataUITests.Tests
 {
-    [Category("UploadDownloadTests")]
+    //[Category("UploadDownloadTests")]
     internal class UploadDownloadTests : UITestFixture
     {
         [Test]
+        [Category("UploadDownloadTests")]
         public void VerifyPageH1()
         {
             Go.To<UploadDownloadPage>()
@@ -19,6 +20,7 @@ namespace AtataUITests.Tests
         }
 
         [Test]
+        [Category("UploadDownloadTests")]
         public void VerifFileUpload()
         {
             Go.To<UploadDownloadPage>()

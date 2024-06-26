@@ -6,12 +6,12 @@ using System.Reflection.Emit;
 
 namespace AtataUITests.Tests  
 {
-    [Category("CheckBoxTests")]
+    //[Category("CheckBoxTests")]
     internal class CheckBoxTests : UITestFixture
     {
         [Test]
         [Retry(2)]
-        //[Category("CheckBoxTests")]
+        [Category("CheckBoxTests")]
         public void VerifyCheckBoxTreeHomeCheckboxVisible()
         {
             Go.To<CheckBoxPage>()
