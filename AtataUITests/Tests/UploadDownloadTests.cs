@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 namespace AtataUITests.Tests
 {
+    [Category("UploadDownloadTests")]
     internal class UploadDownloadTests : UITestFixture
     {
         [Test]

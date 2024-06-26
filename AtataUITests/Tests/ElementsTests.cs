@@ -8,6 +8,7 @@ namespace AtataUITests.Tests
 
         [Test]
         [Description("TestDecription")]
+        [Category("ElementsTests")]
         public void VerifyURL()
         {
             Go.To<ElementsPage>()
