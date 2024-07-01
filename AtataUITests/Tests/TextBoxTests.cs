@@ -9,13 +9,11 @@ using System.Threading.Tasks;
 
 namespace AtataUITests.Tests
 {
+    //[Category("TextBoxTests")]
     internal class TextBoxTests : UITestFixture
     {
-        //Preconditions: Go to https://demoqa.com/text-box
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("TextBox Url should be https://demoqa.com/text-box")]
+        //Pre-conditions:
+        [Test, Description("TextBox Url should be https://demoqa.com/text-box"), Retry(2)]
         public void TextBoxUrl()
         {
             Go.To<TextBoxPage>()
@@ -25,31 +23,23 @@ namespace AtataUITests.Tests
         }
 
         //TC 1:
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("TextBoxH1 text should be = Text Box")]
+        [Test, Description("TextBoxH1 text should be = Text Box"), Retry(2)]
         public void PageTitleH1()
         {
             Go.To<TextBoxPage>()
                 .TextBoxH1.Should.Be("Text Box");
         }
 
+        //Full Name Input:
         //TC 2:
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("FullNameLabel text should be = Full Name")]
+        [Test, Description("FullNameLabel text should be = Full Name"), Retry(2)]
         public void UserNameLabelText()
         {
             Go.To<TextBoxPage>()
                 .FullNameLabel.Should.Be("Full Name");
         }
         //TC 3:
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("FullNameInput type should be = text and placeholder = Full Name")]
+        [Test, Description("FullNameInput type should be = text and placeholder = Full Name"), Retry(2)]
         public void UserNameInputType()
         {
             Go.To<TextBoxPage>()
@@ -57,20 +47,14 @@ namespace AtataUITests.Tests
         }
 
         //TC 4:
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("FullNameInput should be autocomplete = off")]
+        [Test, Description("FullNameInput should be autocomplete = off"), Retry(2)]
         public void UserNameInputAutocomplete()
         {
             Go.To<TextBoxPage>()
                 .FullNameInput.DomAttributes["autocomplete"].Should.Equal("off");
         }
         //TC 5:
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("FullNameInput style should be display: block")]
+        [Test, Description("FullNameInput style should be display: block"), Retry(2)]
         public void UserNameInputStyle()
         {
             Go.To<TextBoxPage>()
@@ -78,10 +62,7 @@ namespace AtataUITests.Tests
         }
 
         //TC 6: 
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("FullNameInput enter value FirstName 123")]
+        [Test, Description("FullNameInput enter value FirstName 123"), Retry(2)]
         public void UserNameInputEnterValue()
         {
             Go.To<TextBoxPage>()
@@ -90,10 +71,7 @@ namespace AtataUITests.Tests
         }
 
         //TC 7: 
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("FullNameInput clear should be empty")]
+        [Test, Description("FullNameInput clear should be empty"), Retry(2)]
         public void UserNameInputClear()
         {
             Go.To<TextBoxPage>()
@@ -102,11 +80,8 @@ namespace AtataUITests.Tests
         }
         //[Email input]
         //TC 8: 
-        [Test]
-        [Retry(2)]
-        [Category("TextBoxTests")]
-        [Description("label of User Email label should be Email")]
-        public void VerifyEmailInput()
+        [Test, Description("label of User Email label should be Email"), Retry(2)]
+        public void VerifyEmailInputLabel()
         {
             Go.To<TextBoxPage>()
                 .EmailLabel.Should.Be("Email");

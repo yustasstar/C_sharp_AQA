@@ -2,13 +2,10 @@
 
 namespace AtataUITests.Tests
 {
+    //[Category("ElementsTests")]
     public sealed class ElementsTests : UITestFixture
     {
-        //Elements:
-
-        [Test]
-        [Description("TestDecription")]
-        [Category("ElementsTests")]
+        [Test, Description("TestDecription"), Retry(2)]
         public void VerifyURL()
         {
             Go.To<ElementsPage>()

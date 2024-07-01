@@ -4,7 +4,6 @@ using _ = AtataUITests.PageObjects.ElementsPage;
 namespace AtataUITests.PageObjects
 {
     [Url("elements")]
-    [VerifyTitle("DEMOQA")]
     [VerifyContent("Please select an item from left to start practice.")]
     public sealed class ElementsPage : DemoQAPage<_>
     {

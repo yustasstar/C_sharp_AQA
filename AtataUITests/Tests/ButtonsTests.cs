@@ -2,12 +2,11 @@
 
 namespace AtataUITests.Tests
 {
-    [Category("ButtonTests")]
+    //[Category("ButtonTests")]
     public sealed class ButtonsTests : UITestFixture
     {
         [Test]
         [Retry(2)]
-        //[Category("ButtonTests")]
         [Description("Verify Buttons page Text")]
         public void VerifyTextButtonsPage()
         {
@@ -18,36 +17,33 @@ namespace AtataUITests.Tests
 
         [Test]
         [Retry(2)]
-        //[Category("ButtonTests")]
         [Description("Verify Double Click Me button")]
         public void DoubleClickButtonTest() =>
             Go.To<ButtonsPage>()//.ScrollDown()
             .DoubleClickMe.Should.BeEnabled()
             .DoubleClickMe.DoubleClick()
-            //.DoubleClickMe.Should.BeFocused()
-            //.DoubleClickMessage.Should.Be("You have done a double click")
+            .DoubleClickMe.Should.BeFocused()
+            .DoubleClickMessage.Should.Be("You have done a double click")
             .DinamicClickMessage.Should.Not.BeVisible()
             .RightClickMessage.Should.Not.BeVisible();
 
         [Test]
         [Retry(2)]
-        //[Category("ButtonTests")]
         [Description("Verify Rigth Click Me button")]
         public void RigthClickButtonTest() =>
             Go.To<ButtonsPage>()//.ScrollDown()
             .RigthClickMe.Should.BeEnabled()
             .RigthClickMe.RightClick()
-            //.RigthClickMe.Should.BeFocused()
-            //.RightClickMessage.Should.Be("You have done a right click")
+            .RigthClickMe.Should.BeFocused()
+            .RightClickMessage.Should.Be("You have done a right click")
             .DinamicClickMessage.Should.Not.BeVisible()
             .DoubleClickMessage.Should.Not.BeVisible();
 
         [Test]
         [Retry(2)]
-        //[Category("ButtonTests")]
         [Description("Verify Click Me button")]
         public void ClickButtonTest() =>
-            Go.To<ButtonsPage>().ScrollDown()
+            Go.To<ButtonsPage>()//.ScrollDown()
             .ClickMe.Should.BeEnabled()
             .ClickMe.Click()
             .ClickMe.Should.BeFocused()

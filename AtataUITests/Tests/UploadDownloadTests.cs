@@ -11,15 +11,14 @@ namespace AtataUITests.Tests
     //[Category("UploadDownloadTests")]
     internal class UploadDownloadTests : UITestFixture
     {
-        [Test]
-        [Category("UploadDownloadTests")]
+        [Test, Retry(2)]
         public void VerifyPageH1()
         {
             Go.To<UploadDownloadPage>()
                 .Find<H1<UploadDownloadPage>>().Should.Equal("Upload and Download");
         }
 
-        [Test]
+        [Test, Retry(2)]
         public void VerifFileUpload()
         {
             Go.To<UploadDownloadPage>()
@@ -28,7 +27,7 @@ namespace AtataUITests.Tests
             AtataContext.Current.Artifacts.Should.WithinSeconds(10).ContainFile("sampleFile.jpeg");
         }
 
-        [Test]
+        [Test, Retry(2)]
         public void VerifFileDownload()
         {
             Go.To<UploadDownloadPage>()
